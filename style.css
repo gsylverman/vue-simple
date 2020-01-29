@@ -1,0 +1,24 @@
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: silver;
+    margin:5px;
+}
+.red{
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.green {
+    background: green;
+}
+.orange {
+    background: orange;
+}
+.grey {
+    background: grey;
+    height: 50px;
+    width: 2px;
+}

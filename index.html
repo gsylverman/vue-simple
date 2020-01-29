@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div @click="active=!active" :class="divClassed" class="box"></div>
+        <div class="box" :class="blueColor"></div>
+        <div class="box" @click="activeGr=!activeGr" :class="greenCol"></div>
+        <div class="box" :class="orangeCol"></div>
+        <div class="box" :class="[color,{red:activeGr}]"></div>
+        <input type="text" v-model="color" />
+
+        <div>
+            <ul>
+                <li v-for="item in list">{{item.name}}
+                    <input type="text" v-model="item.name" />
+                    <button @click="del(item.name)">-</button>
+                </li>
+            </ul>
+        </div>
+
+        <input type="text" v-model="field">
+        <p>{{field}}</p>
+
+        <button @click="add">add</button>
+
+        <input type="text" v-bind:placeholder="field" />
+
+        <div :class="{grey:true}" :style="changed"></div>
+
+        <button @click="changeWidth">start</button>
+
+        <div :class="{grey:true}" :style="size"></div>
+
+        <input type="text" v-model="howBig" />
+
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
