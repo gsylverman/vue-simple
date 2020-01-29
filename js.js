@@ -1,87 +1,27 @@
 new Vue({
     el: "#app",
     data: {
-        active: false,
-        list: [
-            { name: "a" },
-            { name: "b" },
-            { name: "c" },
-        ],
-        field: "",
-        inp: "",
-        activeGr: false,
-        color: "",
-        width: 0,
-        howBig: 5
+        started: false,
+        yourLife: 80,
+        monsterLife: 50,
+        hits:[]
     },
     methods: {
-        change(e) {
-            this.field = e.target.value;
-        },
-        add() {
-            console.log(this.field)
-            this.list.push({ name: this.field });
-            this.field = "";
-        },
-        del(name) {
-            this.list = this.list.filter(item => {
-                return item.name !== name;
-            });
-        },
-        changeWidth() {
-            const cl = setInterval(() => {
-                if (this.width < 300) {
-                    this.width += 5;
-                }
-            }, 50);
-            if (this.width === 300) {
-                clearInterval(cl);
-            }
-            console.log(this.width);
-        }
 
     },
     computed: {
-        size() {
+        yLife() {
             return {
-                width: this.howBig + "px"
+                width: this.yourLife + "%"
             }
         },
-        changed() {
+        mLife() {
             return {
-                width: this.width + "px"
-            }
-        },
-        divClassed: function () {
-            return {
-                red: this.active
-            }
-        },
-        progress() {
-            return {
-                width: this.width + "px"
-            }
-        },
-        blueColor: function () {
-            return {
-                blue: !this.active
-            }
-        },
-        greenCol: function () {
-            return {
-                green: this.activeGr
-            }
-        },
-        orangeCol: function () {
-            return {
-                orange: !this.activeGr
+                width: this.monsterLife + "%"
             }
         }
-
     },
     watch: {
-        active(val) {
-            console.log(val);
-        }
+
     }
 });

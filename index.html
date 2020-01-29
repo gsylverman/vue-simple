@@ -13,39 +13,39 @@
 
 <body>
     <div id="app">
-        <div @click="active=!active" :class="divClassed" class="box"></div>
-        <div class="box" :class="blueColor"></div>
-        <div class="box" @click="activeGr=!activeGr" :class="greenCol"></div>
-        <div class="box" :class="orangeCol"></div>
-        <div class="box" :class="[color,{red:activeGr}]"></div>
-        <input type="text" v-model="color" />
 
-        <div>
-            <ul>
-                <li v-for="item in list">{{item.name}}
-                    <input type="text" v-model="item.name" />
-                    <button @click="del(item.name)">-</button>
-                </li>
-            </ul>
+        <div class="header">
+            <div class="card">
+                <h3>You</h3>
+                <div class="lifeBackground">
+                    <div :style="yLife" class=" life ">{{yourLife}}</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Monster</h3>
+                <div class="lifeBackground">
+                    <div :style="mLife" class=" life ">{{monsterLife}}</div>
+                </div>
+            </div>
         </div>
 
-        <input type="text" v-model="field">
-        <p>{{field}}</p>
+        <div class="main">
+            <div class="menu">
+                <div v-if="!started" class="start" @click="started=true">STAR NEW GAME</div>
+                <div v-else class="plaing">
+                    <div class="p attack">ATACK</div>
+                    <div class="p special">SPECIAL ATACK</div>
+                    <div class="p heal">HEAL</div>
+                    <div @click="started=false" class="p giveup">GIVE UP</div>
+                </div>
+            </div>
+        </div>
+        <div class="hits">
 
-        <button @click="add">add</button>
-
-        <input type="text" v-bind:placeholder="field" />
-
-        <div :class="{grey:true}" :style="changed"></div>
-
-        <button @click="changeWidth">start</button>
-
-        <div :class="{grey:true}" :style="size"></div>
-
-        <input type="text" v-model="howBig" />
+        </div>
 
     </div>
-
     <script src="js.js"></script>
 </body>
 
