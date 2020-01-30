@@ -26,10 +26,12 @@
   color: white;
 }
 .life {
+  width: 100%;
   height: 30px;
   background: green;
   color: white;
   padding-top: 15px;
+  transition: width 500ms;
 }
 
 .main {
