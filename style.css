@@ -40,6 +40,7 @@
   box-shadow: -1px 1px 2px 1px lightgray;
 }
 .hits {
+  padding: 1%;
   margin-top: 20px;
   text-align: center;
   box-shadow: -1px 1px 2px 1px lightgray;
