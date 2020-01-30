@@ -34,7 +34,7 @@
             <div class="menu">
                 <div v-if="!started" class="start" @click="started=true">STAR NEW GAME</div>
                 <div v-else class="plaing">
-                    <div @click="attack" :disabled="gameOver" class="p attack">ATACK</div>
+                    <div @click="attack" :disabled="false" class="p attack">ATACK</div>
                     <div class="p special">SPECIAL ATACK</div>
                     <div @click="heal" class="p heal">HEAL</div>
                     <div @click="giveUp" class="p giveup">GIVE UP</div>
@@ -42,8 +42,8 @@
             </div>
         </div>
         <div v-if="hits.length>0" class="hits">
-            <template class="hit" v-for="item in hits" >
-                <div class="h" v-for="(el,key,index) in item" >{{key}}: {{el}}</div>
+            <template class="hit" v-for="item in hits">
+                <div class="h" v-for="(el,key,index) in item">{{key}}: {{el}}</div>
             </template>
         </div>
 
