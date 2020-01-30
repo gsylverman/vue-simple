@@ -58,7 +58,8 @@ new Vue({
 
     },
     watch: {
-
-
+        started(newVal) {
+            console.log(newVal);
+        }
     }
 });
