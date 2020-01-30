@@ -26,7 +26,6 @@
   color: white;
 }
 .life {
-  width: 0;
   height: 30px;
   background: green;
   color: white;
@@ -40,7 +39,7 @@
 }
 .hits {
   margin-top: 20px;
-  height: 100px;
+  text-align: center;
   box-shadow: -1px 1px 2px 1px lightgray;
 }
 .menu {
@@ -86,4 +85,11 @@
 }
 .giveup {
   background: #fff;
+}
+
+.h:nth-child(odd) {
+  background: orange;
+}
+.h:nth-child(even) {
+  background: lightblue;
 }
