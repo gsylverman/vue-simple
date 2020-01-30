@@ -10,7 +10,7 @@ new Vue({
     methods: {
         attack() {
             function randomDamage() {
-                return Math.floor(Math.random() * 50);
+                return Math.floor(Math.random() * 20);
             }
             const damage1 = randomDamage();
             const damage2 = randomDamage();
@@ -88,6 +88,10 @@ new Vue({
         gameOver() {
             this.yourLife = 100;
             this.monsterLife = 100;
+        },
+        started() {
+            this.yourLife = 100;
+            this.monsterLife = 100; 
         }
     }
 });
