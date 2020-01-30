@@ -15,7 +15,7 @@
 }
 .card {
   padding: 30px;
-  flex-grow: 1;
+  flex: 1 1 50%;
   align-content: space-between;
   text-align: center;
 }
