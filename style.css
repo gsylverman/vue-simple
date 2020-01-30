@@ -15,7 +15,7 @@
 }
 .card {
   padding: 30px;
-  flex-grow: 1;
+  flex: 1 1 50%;
   align-content: space-between;
   text-align: center;
 }
@@ -44,6 +44,9 @@
   margin-top: 20px;
   text-align: center;
   box-shadow: -1px 1px 2px 1px lightgray;
+}
+.h {
+  margin-top: 2px;
 }
 .menu {
   position: relative;
@@ -95,4 +98,8 @@
 }
 .h:nth-child(even) {
   background: lightblue;
+}
+.hit {
+  margin-top: 5px;
+  box-shadow: -0.5px 0.5px 1px 0.5px red;
 }

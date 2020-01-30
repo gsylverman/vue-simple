@@ -14,8 +14,7 @@ new Vue({
                 }
                 const damage1 = randomDamage();
                 const damage2 = randomDamage();
-                this.hits.unshift({ "Monster hits player for": damage1 });
-                this.hits.unshift({ "Player hits monster for": damage2 });
+                this.hits.unshift({ "Monster hits player for": damage1,"Player hits monster for": damage2 });
                 console.log(this.hits);
                 if (this.yourLife && this.monsterLife > 0) {
                     this.yourLife -= damage1;
